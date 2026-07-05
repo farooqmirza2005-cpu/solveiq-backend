@@ -5,6 +5,9 @@ import { GoogleGenAI } from "@google/genai";
 import { tavily } from "@tavily/core";
 
 dotenv.config();
+console.log("Gemini loaded:", !!process.env.GEMINI_API_KEY);
+console.log("Tavily loaded:", !!process.env.TAVILY_API_KEY);
+console.log("PORT:", process.env.PORT);
 
 const app = express();
 app.use(cors());
