@@ -118,6 +118,11 @@ ${message}
 });
 
 // 🚀 Start server
-app.listen(3000, () => {
-  console.log("✅ SolveIQ AI Server running on http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+
+console.log("Gemini Key Loaded:", !!process.env.GEMINI_API_KEY);
+console.log("Tavily Key Loaded:", !!process.env.TAVILY_API_KEY);
+
+app.listen(PORT, () => {
+  console.log(`✅ SolveIQ AI Server running on port ${PORT}`);
 });
